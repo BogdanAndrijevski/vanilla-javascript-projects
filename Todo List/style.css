@@ -42,13 +42,24 @@ button {
     color: black;
     padding: 10px;
 }
+#clear-tasks{
+    background-color: salmon;
+    border: 1px solid salmon;
+}
 
 button:focus {
-    background-color: black;
+    background-color: black !important;
     border: 1px solid cyan;
     color: cyan;
     /* color: springgreen; */
     outline: 0 !important;
+}
+
+#clear-tasks:focus{
+    /* background-color: salmon; */
+    border: 1px solid salmon;
+    color: salmon;
+
 }
 
 input:focus {
@@ -79,11 +90,11 @@ ul {
 #priority-div {
     border: 2px solid orange;
     display: block;
-    /* padding-right: 10px; */
+    /* padding-right: 5px; */
     padding-left: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 40%;
+    width: 35%;
     /* width: 80%; */
     font-size: 14px;
     color: orange;
@@ -97,9 +108,55 @@ label {
 #priority {
     background-color: black;
     color: orange;
-    border: 0px
+    border: 0px;
 }
 
 #priority:focus {
     outline: 0 !important;
 }
+
+/* https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete */
+
+/* Change the white to any color ;) */
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px black inset !important;
+  }
+  
+  /*Change text in autofill textbox*/
+  input:-webkit-autofill {
+    -webkit-text-fill-color: wheat !important;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    body {
+      background-color: rgb(73, 46, 6);
+    }
+    #main-div {
+      width: 35%;
+      /* center horizontal and vertical */
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    body {
+      background-color: rgb(6, 56, 73);
+    }
+    #main-div {
+      width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    body {
+      background-color: rgb(44, 5, 48);
+    }
+    #main-div {
+      width: 75%;
+    }
+  }
+  
