@@ -14,12 +14,15 @@
 
         <form id="task-form">
             <input type="text" id="add-task-input" placeholder="New Task...">
-            <label for="priority">Task Priority:</label>
-            <select name="priority" id="priority">
-                <option selected value="">one</option>
-                <option value="">two</option>
-                <option value="">three</option>
-            </select>
+            <div id="priority-div">
+                <label for="priority">Priority</label>
+                <select name="priority" id="priority">
+                    <option selected value="">one</option>
+                    <option value="">two</option>
+                    <option value="">three</option>
+                </select>
+            </div>
+
             <button type="submit" id="submit-button">Add Task</button>
         </form>
 

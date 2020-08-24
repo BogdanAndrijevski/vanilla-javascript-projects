@@ -1,4 +1,105 @@
-body{
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
     background-color: black;
     color: wheat;
+}
+
+h3 {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+}
+
+#main-div {
+    border: 2px solid wheat;
+    border-radius: 6px;
+    width: 30%;
+    margin: 50px auto;
+    padding: 0px 20px 20px 20px;
+}
+
+input {
+    border: 2px solid springgreen;
+    background-color: black;
+    color: wheat;
+    display: block;
+    padding: 10px;
+    width: 80%;
+}
+
+::placeholder {
+    color: springgreen;
+}
+
+button {
+    display: block;
+    background-color: springgreen;
+    border: 1px solid springgreen;
+    color: black;
+    padding: 10px;
+}
+
+button:focus {
+    background-color: black;
+    border: 1px solid cyan;
+    color: cyan;
+    /* color: springgreen; */
+    outline: 0 !important;
+}
+
+input:focus {
+    outline: 0 !important;
+}
+
+input, button {
+    margin: 10px;
+}
+
+form, #show-tasks-div {
+    border: 1px solid wheat;
+    padding: 20px;
+    max-width: 300px;
+    margin: auto;
+}
+
+#show-tasks-div {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    /* top, right, bottom, left */
+    padding: 0px 25px 0px 10px;
+}
+
+#priority-div {
+    border: 2px solid orange;
+    display: block;
+    /* padding-right: 10px; */
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 40%;
+    /* width: 80%; */
+    font-size: 14px;
+    color: orange;
+    margin: 10px;
+}
+
+label {
+    padding-left: 4px;
+}
+
+#priority {
+    background-color: black;
+    color: orange;
+    border: 0px
+}
+
+#priority:focus {
+    outline: 0 !important;
 }
