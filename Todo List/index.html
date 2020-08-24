@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div id="main-div">
+        <h3 id="add-task-header">Add Task</h3>
+
+        <form id="task-form">
+            <input type="text" id="add-task-input" placeholder="New Task...">
+            <label for="priority">Task Priority:</label>
+            <select name="priority" id="priority">
+                <option selected value="">one</option>
+                <option value="">two</option>
+                <option value="">three</option>
+            </select>
+            <button type="submit" id="submit-button">Add Task</button>
+        </form>
+
+        <h3 id="show-tasks-header">Show Tasks</h3>
+        <div id="show-tasks-div">
+            <input type="text" id="filter-tasks-input" placeholder="Filter Tasks...">
+
+            <ul id="task-list">
+
+            </ul>
+
+            <button id="clear-tasks">Clear Tasks</button>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
+
 </html>
