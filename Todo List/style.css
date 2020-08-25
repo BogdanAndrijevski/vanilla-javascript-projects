@@ -1,162 +1,164 @@
 * {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
-    background-color: black;
-    color: wheat;
+  background-color: black;
+  color: wheat;
 }
 
 h3 {
-    max-width: 300px;
-    margin: auto;
-    padding: 20px;
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
 }
 
 #main-div {
-    border: 2px solid wheat;
-    border-radius: 6px;
-    width: 30%;
-    margin: 50px auto;
-    padding: 0px 20px 20px 20px;
+  border: 2px solid wheat;
+  border-radius: 6px;
+  width: 30%;
+  margin: 50px auto;
+  padding: 0px 20px 20px 20px;
 }
 
 input {
-    border: 2px solid springgreen;
-    background-color: black;
-    color: wheat;
-    display: block;
-    padding: 10px;
-    width: 80%;
+  border: 2px solid springgreen;
+  background-color: black;
+  color: wheat;
+  display: block;
+  padding: 10px;
+  width: 80%;
 }
 
 ::placeholder {
-    color: springgreen;
+  color: springgreen;
 }
 
 button {
-    display: block;
-    background-color: springgreen;
-    border: 1px solid springgreen;
-    color: black;
-    padding: 10px;
+  display: block;
+  background-color: springgreen;
+  border: 1px solid springgreen;
+  color: black;
+  padding: 10px;
 }
-#clear-tasks{
-    background-color: salmon;
-    border: 1px solid salmon;
+
+#clear-tasks {
+  background-color: salmon;
+  border: 1px solid salmon;
 }
 
 button:focus {
-    background-color: black !important;
-    border: 1px solid cyan;
-    color: cyan;
-    /* color: springgreen; */
-    outline: 0 !important;
+  background-color: black !important;
+  border: 1px solid cyan;
+  color: cyan;
+  /* color: springgreen; */
+  outline: 0 !important;
 }
 
-#clear-tasks:focus{
-    /* background-color: salmon; */
-    border: 1px solid salmon;
-    color: salmon;
-
+#clear-tasks:focus {
+  /* background-color: salmon; */
+  border: 1px solid salmon;
+  color: salmon;
 }
 
 input:focus {
-    outline: 0 !important;
+  outline: 0 !important;
 }
 
 input, button {
-    margin: 10px;
+  margin: 10px;
 }
 
 form, #show-tasks-div {
-    border: 1px solid wheat;
-    padding: 20px;
-    max-width: 300px;
-    margin: auto;
+  border: 1px solid wheat;
+  padding: 20px;
+  max-width: 300px;
+  margin: auto;
 }
 
 #show-tasks-div {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 ul {
-    list-style-type: none;
-    /* top, right, bottom, left */
-    padding: 0px 25px 0px 10px;
+  list-style-type: none;
+  /* top, right, bottom, left */
+  padding: 0px 25px 0px 10px;
 }
 
 #priority-div {
-    border: 2px solid orange;
-    display: block;
-    /* padding-right: 5px; */
-    padding-left: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 35%;
-    /* width: 80%; */
-    font-size: 14px;
-    color: orange;
-    margin: 10px;
+  background-color: black;
+  border: 2px solid orange;
+  display: block;
+  /* padding-right: 5px; */
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 35%;
+  /* width: 80%; */
+  font-size: 14px;
+  color: orange;
+  margin: 10px;
 }
 
 label {
-    padding-left: 4px;
+  padding-left: 4px;
 }
 
 #priority {
-    background-color: black;
-    color: orange;
-    border: 0px;
+  background-color: black;
+  color: orange;
+  border: 0px;
 }
 
 #priority:focus {
-    outline: 0 !important;
+  outline: 0 !important;
 }
 
 /* https://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete */
 
 /* Change the white to any color ;) */
+
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+}
+
+/*Change text in autofill textbox*/
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: wheat !important;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: rgb(73, 46, 6);
   }
-  
-  /*Change text in autofill textbox*/
-  input:-webkit-autofill {
-    -webkit-text-fill-color: wheat !important;
+  #main-div {
+    width: 35%;
+    /* center horizontal and vertical */
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  
-  @media screen and (max-width: 1024px) {
-    body {
-      background-color: rgb(73, 46, 6);
-    }
-    #main-div {
-      width: 35%;
-      /* center horizontal and vertical */
-      margin: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-color: rgb(6, 56, 73);
   }
-  
-  @media screen and (max-width: 768px) {
-    body {
-      background-color: rgb(6, 56, 73);
-    }
-    #main-div {
-      width: 50%;
-    }
+  #main-div {
+    width: 50%;
   }
-  
-  @media screen and (max-width: 450px) {
-    body {
-      background-color: rgb(44, 5, 48);
-    }
-    #main-div {
-      width: 75%;
-    }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    background-color: rgb(44, 5, 48);
   }
-  
+  #main-div {
+    width: 75%;
+  }
+}
