@@ -31,7 +31,7 @@ function populateTable(list) {
     list = list.sort((a, b) => a.priority - b.priority);
     // ul.innerHTML = '';
     // faster
-     while (ul.firstChild) {
+    while (ul.firstChild) {
         ul.removeChild(ul.firstChild)
     }
     list.forEach((x) => {
@@ -39,11 +39,13 @@ function populateTable(list) {
     })
 }
 
+
 function insertListItem(task) {
     let li = document.createElement('li');
-    li.appendChild(document.createTextNode(task.name))
-    li.style.borderBottom = '0.5px solid wheat'
-    li.style.padding = '2px'
+    li.appendChild(document.createTextNode(task.name));
+    let priorityColor = (task.priority === '1') ? 'rgba(199, 75, 30, 0.4)' : (task.priority === '2') ? 'rgba(0, 125, 17, 0.4)' : "rgba(13, 161, 168, 0.4)";
+    li.style.backgroundColor = priorityColor;
+    li.style.padding = '6px'
     li.style.margin = '2px'
     let link = document.createElement('a');
     let icon = document.createElement('i');
@@ -67,7 +69,7 @@ function addTask(e) {
         e.preventDefault();
         return;
     }
-   
+
     if (tasks.map(task => task.name).includes(taskInput.value)) {
         alert('task already exists');
         taskInput.value = '';
