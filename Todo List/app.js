@@ -11,6 +11,8 @@ function loadEventListeners() {
     form.addEventListener('submit', addTask);
     clearBtn.addEventListener('click', clearTasks);
     ul.addEventListener('click', removeTask);
+    filter.addEventListener('keyup', filterTasks);
+
 }
 
 function getTasksFromLocalStorage(tasksFromLS) {
@@ -111,4 +113,12 @@ function removeTaskFromLocasStorage(task) {
         }
     }
     localStorage.setItem('tasks', JSON.stringify(tasks))
+}
+
+function filterTasks(e) {
+    let text = e.target.value.toLowerCase();
+    let tasks = getTasksFromLocalStorage(localStorage.getItem('tasks'));
+    let filteredTasks = tasks.filter(task => task.name.toLowerCase().includes(text))
+    // console.log(filteredTasks);
+    populateTable(filteredTasks)
 }
