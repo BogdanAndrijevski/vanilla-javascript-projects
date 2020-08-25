@@ -9,6 +9,8 @@ loadEventListeners();
 function loadEventListeners() {
     document.addEventListener('DOMContentLoaded', getTasks);
     form.addEventListener('submit', addTask);
+    clearBtn.addEventListener('click', clearTasks);
+    ul.addEventListener('click', removeTask);
 }
 
 function getTasksFromLocalStorage(tasksFromLS) {
@@ -83,3 +85,30 @@ function addTask(e) {
 }
 
 
+function clearTasks(e) {
+    while (ul.firstChild) {
+        ul.removeChild(ul.firstChild)
+    }
+    localStorage.clear();
+    e.target.blur();
+}
+
+function removeTask(e) {
+    if (e.target.parentElement.classList.contains('delete-link')) {
+        if (confirm('Are you sure?')) {
+            e.target.parentElement.parentElement.remove();
+            removeTaskFromLocasStorage(e.target.parentElement.parentElement)
+        }
+    }
+}
+
+function removeTaskFromLocasStorage(task) {
+    let tasks = getTasksFromLocalStorage(localStorage.getItem('tasks'));
+    for (let i = 0; i < tasks.length; i++) {
+        if (task.textContent === tasks[i].name) {
+            tasks.splice(i, 1);
+            break;
+        }
+    }
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+}
